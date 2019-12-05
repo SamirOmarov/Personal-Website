@@ -1,27 +1,50 @@
 <template>
-    <v-container fluid fill-height class="home-hero" style="max-height:100vh;">
-        <v-layout justify-center align-center column pa-5>
-            <div class="display-2 font-weight-black white--text text-xs-center"> SAMIR OMAROV</div>
-            <!-- <div class="display-4 font-weight-black white--text text-xs-center mb-3">FOR YOUR TABLE</div> -->
-            <div class="display-1 font-weight-bold white--text text-xs-center">Lorem ipsum</div>
-            <v-btn fab class="mt-5 brown darken-4">
-            <v-icon  color="white">expand_more</v-icon>
-            </v-btn>
-        </v-layout>
-    </v-container>
+  <v-container fluid fill-height class="home-hero" style="max-height:100vh;">
+    <v-layout justify-center align-center column pa-5>
+      <div class="text-hero">SAMIR OMAROV</div>
+      <div
+        class="text-intro"
+      >Software and mechatronics engineering through research & development.</div>
+      <v-btn text class="mt-5">
+        <v-icon color="white">Read More</v-icon>
+      </v-btn>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
 export default {
-    name: 'HomeHero'
+  name: "HomeHero"
 };
 </script>
 
 <style scoped>
+@import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
+
+.text-hero {
+  font-family: "Gravity";
+  color: white;
+  letter-spacing: 10px;
+  font-size: 40px;
+}
+
+.text-intro {
+  font-family: "Gravity";
+  color: white;
+  /* letter-spacing: 1vh; */
+  font-size: 28px;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  /* font-weight: bold; */
+}
+
 .home-hero {
-    background: url('https://images.unsplash.com/photo-1470955233021-2c79a52e5034?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80');
-    background-size: cover;
-    width: 100%;
-    height: 100%;
+  background: url("https://ktechgmbh.com/wp-content/uploads/2019/04/portfolio.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 100%;
 }
 </style>

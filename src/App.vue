@@ -19,4 +19,12 @@ export default {
 </script>
 
 <style>
+
+@font-face {
+    font-family: Gravity;
+    src: url("./assets/Gravity-Regular.otf") format("opentype");
+}
+
+
+
 </style>
