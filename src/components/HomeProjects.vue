@@ -1,20 +1,14 @@
 <template>
     <v-container grid-list-lg>
         <v-layout row>
+        <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7" contain></v-img>
             <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Favourite Projects</v-flex>
         </v-layout>
         <v-layout row wrap>
             <v-flex xs12 sm12 md4>
                 <v-card>
-                    <v-img src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" height="500px">
-                        <v-container fill-height fluid>
-                            <v-layout fill-height>
-                                <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Project1</span>
-                                </v-flex>
-                            </v-layout>
-                        </v-container>
-                    </v-img>
+                    
+                    <v-img src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" height="500px">                    </v-img>
 
                     <v-card-title primary-title>
                         <div>
