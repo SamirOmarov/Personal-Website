@@ -1,10 +1,8 @@
 <template>
-  <v-container fluid fill-height class="home-hero" style="max-height:100vh;">
+  <v-container fluid fill-height id="home-bg" style="max-height:100vh;">
     <v-layout justify-center align-center column pa-5>
       <div class="text-hero">SAMIR OMAROV</div>
-      <div
-        class="text-intro"
-      >Software and mechatronics engineering through research & development.</div>
+      <div class="text-intro">Software and mechatronics engineering through research & development.</div>
       <v-btn text class="mt-5">
         <v-icon color="white">Read More</v-icon>
       </v-btn>
@@ -12,11 +10,30 @@
   </v-container>
 </template>
 
+
 <script>
 export default {
-  name: "HomeHero"
+  mounted() {
+    window.VANTA.WAVES({
+      el: "#home-bg",
+      mouseControls: true,
+      touchControls: true,
+      minHeight: 200.0,
+      minWidth: 200.0,
+      scale: 1.0,
+      scaleMobile: 1.0,
+      color: 0x2f4350,
+      shininess: 42.0,
+      waveHeight: 15.5,
+      zoom: 0.97
+    });
+  }
 };
 </script>
+
+
+
+
 
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
@@ -24,8 +41,10 @@ export default {
 .text-hero {
   font-family: "Gravity";
   color: white;
-  letter-spacing: 10px;
+  letter-spacing: 20px;
   font-size: 40px;
+  margin-inline-start: 10%;
+  margin-inline-end: 10%;
 }
 
 .text-intro {
@@ -33,18 +52,18 @@ export default {
   color: white;
   /* letter-spacing: 1vh; */
   font-size: 28px;
-  display: block;
+  /* display: block; */
   margin-block-start: 1em;
   margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  /* font-weight: bold; */
+  margin-inline-start: 10%;
+  margin-inline-end: 10%;
 }
 
-.home-hero {
-  background: url("https://ktechgmbh.com/wp-content/uploads/2019/04/portfolio.jpg");
+/* .home-hero {
+  background: url('~@/assets/bg.png');
   background-size: cover;
   width: 100%;
   height: 100%;
-}
+} */
 </style>
+

@@ -19,6 +19,7 @@
       <v-btn text class="hidden-sm-and-down">Projects</v-btn>
       <v-spacer class="hidden-sm-and-down"></v-spacer>
       <v-btn text class="hidden-sm-and-down">Contact</v-btn>
+      
     </v-app-bar>
   </span>
 </template>
