@@ -3,8 +3,8 @@
     <v-layout justify-center align-center column pa-5>
       <div class="text-hero">SAMIR OMAROV</div>
       <div class="text-intro">Software and mechatronics engineering through research & development.</div>
-      <v-btn text class="mt-5">
-        <v-icon color="white">Read More</v-icon>
+      <v-btn text class="mt-10">
+        <v-icon color="#1ba098" >Read More</v-icon>
       </v-btn>
     </v-layout>
   </v-container>
@@ -18,11 +18,12 @@ export default {
       el: "#home-bg",
       mouseControls: true,
       touchControls: true,
-      minHeight: 200.0,
-      minWidth: 200.0,
+      minHeight: 100.0,
+      minWidth: 100.0,
       scale: 1.0,
       scaleMobile: 1.0,
-      color: 0x2f4350,
+      // color: 0x2f4350,
+      color: 0x051622,
       shininess: 42.0,
       waveHeight: 15.5,
       zoom: 0.97
@@ -33,37 +34,30 @@ export default {
 
 
 
-
-
 <style scoped>
 @import url("https://fonts.googleapis.com/css?family=Montserrat|Raleway&display=swap");
 
 .text-hero {
   font-family: "Gravity";
-  color: white;
+  color: #deb992;
+  /* color: white; */
   letter-spacing: 20px;
   font-size: 40px;
-  margin-inline-start: 10%;
-  margin-inline-end: 10%;
+  /* margin-inline-start: 10%;
+  margin-inline-end: 10%; */
 }
 
 .text-intro {
   font-family: "Gravity";
-  color: white;
+  color: #deb992;
+  /* color: white; */
   /* letter-spacing: 1vh; */
-  font-size: 28px;
+  font-size: 32px;
   /* display: block; */
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
   margin-inline-start: 10%;
   margin-inline-end: 10%;
 }
-
-/* .home-hero {
-  background: url('~@/assets/bg.png');
-  background-size: cover;
-  width: 100%;
-  height: 100%;
-} */
 </style>
 
