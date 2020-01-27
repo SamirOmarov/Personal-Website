@@ -1,7 +1,7 @@
 <template >
-  <v-container  id="about">
+  <v-container  id="techstack">
     <v-layout column>
-      <v-flex class="display-2 text-xs-center my-5">MY WORK
+      <v-flex class="display-2 text-xs-center my-5">MY WEBSITE STACK
 </v-flex>
       <v-flex>
         <div class="headline mt-3">Lorem ipsum</div>
@@ -35,7 +35,7 @@
 
 <script>
 export default {
-  name: "HomeDetails"
+  name: "HomeTechStack"
 };
 </script>
 

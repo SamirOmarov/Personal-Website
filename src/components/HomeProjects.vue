@@ -1,5 +1,5 @@
 <template>
-    <v-container grid-list-lg>
+    <v-container id="projects" grid-list-lg>
         <v-layout row>
         <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7" contain></v-img>
             <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Favourite Projects</v-flex>
