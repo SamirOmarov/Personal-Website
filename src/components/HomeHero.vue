@@ -4,7 +4,7 @@
       <div class="text-hero">SAMIR OMAROV</div>
       <div class="text-intro">Software and mechatronics engineering through research & development.</div>
       <v-btn text style="margin-top:10%">
-        <v-icon v-scroll-to="{ el: '#about', offset: -50 }" color="#1ba098" >Read More</v-icon>
+        <v-icon v-scroll-to="{ el: '#about', offset: -50 }" color="#1ba098" >READ MORE</v-icon>
       </v-btn>
     </v-layout>
   </v-container>

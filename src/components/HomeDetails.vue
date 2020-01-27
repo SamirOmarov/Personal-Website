@@ -17,15 +17,33 @@
 
         <v-col>
           <div class="mt-3 text-heading">Software Development</div>
-          <p
-            class="subheading mt-3 text-skills"
-          >Lorem ipsum uris interdumcidunt dapibus. Quisque sollicitudin, mauris a consequat consectetur, turpis nisl sollicitudin enim, id consectetur neque neque nec metus. Pellentesque dolor nisi, vulputate quis lobortis ac, tincidunt et quam. Mauris pulvinar blandit nisi nec mattis. Aliquam accumsan ut sem eget efficitur. Vivamus in tortor gravida eros laoreet condimentum nec vel d</p>
+          <div class="subheading mt-3 text-skills">
+            Here are a few technologies I've been working with recently:
+            <ul style="margin-top:10px;">
+              <li>Python: Django, Flask, Automation</li>
+              <li>C/C++: Low level/embedded IoT programming</li>
+              <li>Vue.js: Vuetify</li>
+              <li>Flutter</li>
+              <li>PostgreSQL</li>
+              <li>Docker,Kubernetes</li>
+              <li>HTML & (S)CSS</li>
+            </ul>
+          </div>
         </v-col>
         <v-col>
-          <div class="mt-3 text-heading">Data Science</div>
-          <p
-            class="subheading mt-3 text-skills"
-          >Nullam nec r massa egestas vitae. dhaihiduwah adhiawhd haidhiuaqhd aiwdhiuaq</p>
+          <div class="mt-3 text-heading">Data Science & ML</div>
+          <div class="subheading mt-3 text-skills">
+            I love training deep learning models on large datasets
+            <ul style="margin-top:10px;">
+              <li>Python essentials</li>
+              <li>Pytorch, Tensorflow</li>
+              <li>Data Modeling & Evaluation</li>
+              <li>Distributed Computing: AWS, Kaggle</li>
+              <li>Windows & Linux</li>
+              <li>Git</li>
+              <li>Web Scraping</li>
+            </ul>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -39,6 +57,11 @@ export default {
 </script>
 
 <style scoped>
+li {
+  /* list-style-type: none; */
+  margin-top: 8px;
+}
+
 #about {
   width: 100%;
   background-color: #051622;
@@ -56,14 +79,12 @@ export default {
   margin-inline-end: 10%;
 }
 
-
-
 .text-heading {
   font-family: "Gravity";
   color: #deb992;
   /* color: white; */
   letter-spacing: 10px;
-  font-size: 26px;
+  font-size: 24px;
 
   margin-block-start: 2em;
   margin-block-end: 2em;
@@ -76,12 +97,12 @@ export default {
   /* color: #deb992; */
   color: white;
   /* letter-spacing: 1vh; */
-  font-size: 24px;
+  font-size: 18px;
   /* display: block; */
   margin-block-start: 2em;
   margin-block-end: 2em;
   margin-inline-start: 20%;
-  margin-inline-end: 10%;
+  margin-inline-end: 20%;
 }
 
 .text-style {
@@ -89,14 +110,11 @@ export default {
   /* color: #deb992; */
   color: white;
   /* letter-spacing: 1vh; */
-  font-size: 24px;
+  font-size: 22px;
   /* display: block; */
   margin-block-start: 2em;
   margin-block-end: 2em;
   margin-inline-start: 10%;
   margin-inline-end: 10%;
 }
-
-
-
 </style>
