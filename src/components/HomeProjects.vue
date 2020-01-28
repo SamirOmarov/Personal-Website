@@ -1,75 +1,99 @@
-<template>
-    <v-container id="projects" grid-list-lg>
-        <v-layout row>
-        <v-img src="https://picsum.photos/510/300?random" aspect-ratio="1.7" contain></v-img>
-            <v-flex xs12 class="text-xs-center display-1 font-weight-black my-5">Favourite Projects</v-flex>
-        </v-layout>
-        <v-layout row wrap>
-            <v-flex xs12 sm12 md4>
-                <v-card>
-                    
-                    <v-img src="https://images.unsplash.com/photo-1550439062-609e1531270e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" height="500px">                    </v-img>
-
-                    <v-card-title primary-title>
-                        <div>
-                            <h3 class="headline mb-0">Project1</h3>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus.
-                            </div>
-                        </div>
-                    </v-card-title>
-                </v-card>
-            </v-flex>
-
-            <v-flex xs12 sm12 md4>
-                <v-card>
-                    <v-img src="https://images.unsplash.com/photo-1534972195531-d756b9bfa9f2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" height="500px">
-                        <v-container fill-height fluid>
-                            <v-layout fill-height>
-                                <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Project 2</span>
-                                </v-flex>
-                            </v-layout>
-                        </v-container>
-                    </v-img>
-                    <v-card-title primary-title>
-                        <div>
-                            <h3 class="headline mb-0">Project 2</h3>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus.
-                            </div>
-                        </div>
-                    </v-card-title>
-                </v-card>
-            </v-flex>
-
-            <v-flex xs12 sm12 md4>
-                <v-card>
-                    <v-img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1052&q=80" height="500px">
-                        <v-container fill-height fluid>
-                            <v-layout fill-height>
-                                <v-flex xs12 align-end flexbox>
-                                    <span class="headline white--text">Project 3</span>
-                                </v-flex>
-                            </v-layout>
-                        </v-container>
-                    </v-img>
-                    <v-card-title primary-title>
-                        <div>
-                            <h3 class="headline mb-0">Project 3</h3>
-                            <div>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mauris felis, varius rutrum massa a, dignissim ornare dui. Cras eget velit eu dui tristique lobortis sit amet vel tellus.
-                            </div>
-                        </div>
-                    </v-card-title>
-                </v-card>
-            </v-flex>
-        </v-layout>
+<template >
+  <div id="projects">
+    <v-container>
+      {{ getRepos() }}
+      <v-row no-gutters>
+        <v-row>
+          <v-col class="text-xs-center my-5 text-important">FAVOURITE PROJECTS</v-col>
+        </v-row>
+        <v-row>
+          <v-col>
+            <div v-for="repo in repos" v-bind:key="repo">
+                <!-- For table need .name (inside .html_url)
+                .description .language .stargazers_count-->
+              <p class="text-important">{{ repo.name }}</p>
+              <p class="text-description">{{ repo.description }}</p>
+            </div>
+          </v-col>
+        </v-row>
+      </v-row>
     </v-container>
+  </div>
 </template>
 
+
 <script>
+import axios from "axios";
+
 export default {
-    name: 'HomePlans'
+  name: "HomePlans",
+
+  data: function() {
+    return {
+      repos: null
+    };
+  },
+
+  methods: {
+    getRepos: function() {
+      return axios
+        .get(`https://api.github.com/users/SamirOmarov/repos`)
+        .then(response => {
+          this.repos = response.data;
+        })
+        .catch(error => {
+          console.log(error);
+        });
+    }
+
+    // async getNumberofFollowers() {
+    //   let res = await axios.get("https://api.github.com/users/SamirOmarov");
+    //     let followers = res.data.followers;
+    //     let location = res.data.location;
+
+    // }
+  }
 };
 </script>
 
 <style scoped>
+#projects {
+  width: 100%;
+  background-color: #051622;
+}
+
+.text-important {
+  font-family: "Gravity";
+  color: #deb992;
+  /* color: white; */
+  letter-spacing: 10px;
+  font-size: 30px;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  margin-inline-start: 12%;
+  margin-inline-end: 10%;
+}
+
+.text-style {
+  font-family: "Gravity";
+  color: #deb992;
+  /* color: white; */
+  letter-spacing: 10px;
+  font-size: 30px;
+  margin-block-start: 2em;
+  margin-block-end: 2em;
+  margin-inline-start: 12%;
+  margin-inline-end: 10%;
+}
+
+.text-description {
+  font-family: "Gravity";
+  color: white;
+  letter-spacing: 10px;
+  font-size: 16px;
+  /* margin-block-start: 2em; */
+  /* margin-block-end: 2em; */
+  margin-inline-start: 12%;
+  margin-inline-end: 10%;
+}
 </style>
