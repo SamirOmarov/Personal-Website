@@ -1,22 +1,19 @@
 <template >
   <div id="projects">
     <v-container>
-      {{ getRepos() }}
-      <v-row no-gutters>
-        <v-row>
-          <v-col class="text-xs-center my-5 text-important">FAVOURITE PROJECTS</v-col>
-        </v-row>
-        <v-row>
-          <v-col>
-            <div v-for="repo in repos" v-bind:key="repo">
-                <!-- For table need .name (inside .html_url)
-                .description .language .stargazers_count-->
-              <p class="text-important">{{ repo.name }}</p>
-              <p class="text-description">{{ repo.description }}</p>
-            </div>
-          </v-col>
-        </v-row>
-      </v-row>
+      <v-col class="text-xs-center my-5 text-important">GITHUB PROJECTS</v-col>
+
+      <v-data-table
+        dark
+        :headers="headers"
+        :items="repos"
+        :items-per-page="numberPerpage"
+        class="elevation-1"
+      >
+        <template v-slot:item.name="{ item }">
+          <a :href="item.html_url" class="custom-link">{{ item.name }}</a>
+        </template>
+      </v-data-table>
     </v-container>
   </div>
 </template>
@@ -26,37 +23,52 @@
 import axios from "axios";
 
 export default {
-  name: "HomePlans",
+  name: "HomeProjects",
 
   data: function() {
     return {
-      repos: null
+      headers: [
+        { text: "Title", align: "left", value: "name" },
+        { text: "Description", value: "description" },
+        { text: "Language", value: "language" },
+        { text: "Stars", value: "stargazers_count" }
+        // { text: "", value: "html_url" }
+      ],
+      numberPerpage: 5,
+      repos: []
     };
+  },
+
+  mounted: function() {
+    this.getRepos();
   },
 
   methods: {
     getRepos: function() {
-      return axios
-        .get(`https://api.github.com/users/SamirOmarov/repos`)
+      let self = this;
+      axios
+        .get(`https://api.github.com/users/SamirOmarov/repos`, {
+          params: {
+            sort: "updated"
+          }
+        })
         .then(response => {
-          this.repos = response.data;
+          self.repos = response.data;
         })
         .catch(error => {
           console.log(error);
         });
     }
-
-    // async getNumberofFollowers() {
-    //   let res = await axios.get("https://api.github.com/users/SamirOmarov");
-    //     let followers = res.data.followers;
-    //     let location = res.data.location;
-
-    // }
   }
 };
 </script>
 
 <style scoped>
+.custom-link {
+  color: white;
+  text-decoration: unset;
+  font-weight: 700;
+}
 #projects {
   width: 100%;
   background-color: #051622;
