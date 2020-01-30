@@ -2,7 +2,7 @@
   <div id="projects">
     <v-container>
       <v-row no-gutters justify="center">
-        <v-col cols="12" lg="8" md="9" sm="10" class="my-5">
+        <v-col cols="12" lg="8" md="12" sm="10" class="my-5">
           <p class="text-important">PROJECTS REPOSITORY</p>
           <v-data-table
             dark

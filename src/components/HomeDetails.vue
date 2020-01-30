@@ -4,7 +4,7 @@
       <v-row no-gutters>
         
         <v-row justify="center">
-          <v-col cols="12" lg="8" md="9" sm="10">
+          <v-col cols="12" lg="8" md="12" sm="10">
             <p class="my-5 text-important">MY WORK</p>
             <p class="mt-3 text-details">
               I always had a desire to know how things work, wanted to learn by experience & yearned to

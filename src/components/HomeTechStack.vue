@@ -1,11 +1,18 @@
 <template >
   <div id="techstack">
     <v-container>
-      <v-row no-gutters justify="center">
-        <v-col cols="12" lg="8" md="9" sm="10">
-          <p class="text-important">TECH STACK</p>
-          <p class="text-description">MY WEBSITE ARCHITECTURE</p>
-        </v-col>
+      <v-row no-gutters>
+
+        <v-row justify="center">
+
+          <v-col cols="12" lg="8" md="12" sm="10">
+            <p class="my-5 text-important">WEB TECH STACK</p>
+            <p class="mt-3 text-details">
+              Single page Web app written in Vue and backend operations through RESTfull API powered by Python and Flask.
+              Projects component uses Github REST API v3.
+            </p>
+          </v-col>
+        </v-row>
 
         <v-row justify="center">
           <v-col cols="12" lg="2" md="3" sm="10" >
@@ -19,7 +26,7 @@
             </div>
           </v-col>
 
-          <v-col cols="12" lg="2" md="3" sm="10">
+          <v-col cols="12" lg="2" md="3" sm="10" >
             <p class="text-details mt-5">Back End</p>
             <div class="subheading mt-3 text-description">
               <ul style="margin-top:10px;">
@@ -29,7 +36,7 @@
             </div>
           </v-col>
 
-          <v-col cols="12" lg="2" md="3" sm="10">
+          <v-col cols="12" lg="2" md="3" sm="10" >
             <p class="text-details mt-5">Database</p>
             <div class="subheading mt-3 text-description">
               <ul style="margin-top:10px;">
