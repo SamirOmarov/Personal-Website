@@ -1,12 +1,20 @@
 <template>
   <v-container fluid fill-height id="home-bg" style="max-height:100vh;">
-    <v-layout justify-center align-center column pa-5>
-      <div class="text-hero">SAMIR OMAROV</div>
-      <div class="text-intro">Software and mechatronics engineering through research & development.</div>
-      <v-btn text style="margin-top:10%">
-        <v-icon v-scroll-to="{ el: '#about', offset: -50 }" color="#1ba098" >READ MORE</v-icon>
-      </v-btn>
-    </v-layout>
+    <v-row justify="center" no-gutters>
+      <v-col cols="12" lg="8" md="9" sm="10" class="my-5" >
+        <p class="text-hero text-center">SAMIR OMAROV</p>
+        <p class="text-intro text-center ">
+          Software and mechatronics engineering through
+          research & development.
+        </p>
+
+        <div class="text-center">
+        <v-btn text style="margin-top:10%">
+          <v-icon v-scroll-to="{ el: '#about', offset: -50 }" color="#1ba098">READ MORE</v-icon>
+        </v-btn>
+        </div>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -40,24 +48,14 @@ export default {
 .text-hero {
   font-family: "Gravity";
   color: #deb992;
-  /* color: white; */
   letter-spacing: 20px;
   font-size: 40px;
-  /* margin-inline-start: 10%;
-  margin-inline-end: 10%; */
 }
 
 .text-intro {
   font-family: "Gravity";
   color: #deb992;
-  /* color: white; */
-  /* letter-spacing: 1vh; */
   font-size: 32px;
-  /* display: block; */
-  margin-block-start: 2em;
-  margin-block-end: 2em;
-  margin-inline-start: 10%;
-  margin-inline-end: 10%;
 }
 </style>
 

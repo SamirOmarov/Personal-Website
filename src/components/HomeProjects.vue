@@ -1,19 +1,22 @@
 <template >
   <div id="projects">
     <v-container>
-      <v-col class="text-xs-center my-5 text-important">GITHUB PROJECTS</v-col>
-
-      <v-data-table
-        dark
-        :headers="headers"
-        :items="repos"
-        :items-per-page="numberPerpage"
-        class="elevation-1"
-      >
-        <template v-slot:item.name="{ item }">
-          <a :href="item.html_url" class="custom-link">{{ item.name }}</a>
-        </template>
-      </v-data-table>
+      <v-row no-gutters justify="center">
+        <v-col cols="12" lg="8" md="9" sm="10" class="my-5">
+          <p class="text-important">PROJECTS REPOSITORY</p>
+          <v-data-table
+            dark
+            :headers="headers"
+            :items="repos"
+            :items-per-page="numberPerpage"
+            class="elevation-1"
+          >
+            <template v-slot:item.name="{ item }">
+              <a :href="item.html_url" target="_blank" class="custom-link">{{ item.name }}</a>
+            </template>
+          </v-data-table>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
@@ -74,38 +77,4 @@ export default {
   background-color: #051622;
 }
 
-.text-important {
-  font-family: "Gravity";
-  color: #deb992;
-  /* color: white; */
-  letter-spacing: 10px;
-  font-size: 30px;
-  margin-block-start: 2em;
-  margin-block-end: 2em;
-  margin-inline-start: 12%;
-  margin-inline-end: 10%;
-}
-
-.text-style {
-  font-family: "Gravity";
-  color: #deb992;
-  /* color: white; */
-  letter-spacing: 10px;
-  font-size: 30px;
-  margin-block-start: 2em;
-  margin-block-end: 2em;
-  margin-inline-start: 12%;
-  margin-inline-end: 10%;
-}
-
-.text-description {
-  font-family: "Gravity";
-  color: white;
-  letter-spacing: 10px;
-  font-size: 16px;
-  /* margin-block-start: 2em; */
-  /* margin-block-end: 2em; */
-  margin-inline-start: 12%;
-  margin-inline-end: 10%;
-}
 </style>

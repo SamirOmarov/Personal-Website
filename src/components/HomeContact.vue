@@ -1,8 +1,10 @@
 <template >
   <v-container id="contact">
-    <v-layout column>
-      <v-flex class="display-2 text-xs-center my-5">Contact</v-flex>
-    </v-layout>
+    <v-row no-gutters justify="center">
+      <v-col cols="12" lg="8" md="9" sm="10" class="my-5">
+        
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
