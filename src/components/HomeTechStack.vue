@@ -69,7 +69,7 @@ export default {
 
 <style scoped>
 #techstack {
-  /* width: 100%; */
+  
   background-color: #051622;
 }
 </style>
