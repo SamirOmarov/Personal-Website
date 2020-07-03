@@ -1,4 +1,21 @@
-# samiromarov
+
+
+<h1 align="center">
+  <br>
+  <a href="http://samiromarov.com/">samiromarov.com</a>
+  <br>
+  <br>
+</h1>
+
+## Screenshots
+![screenshot](demo/screenshot.png)
+
+## Tech/framework used
+
+<b>Built with</b>
+- [Vue](https://vuejs.org/)
+- [Vuetify](https://vuetifyjs.com/en/)
+- [Vanta.js](https://www.vantajs.com/)
 
 ## Project setup
 ```
