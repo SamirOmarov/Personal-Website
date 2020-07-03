@@ -8,7 +8,7 @@
 </h1>
 
 ## Screenshots
-![screenshot](demo/screenshot.png)
+![screenshot](demo.png)
 
 ## Tech/framework used
 
