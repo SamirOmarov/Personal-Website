@@ -6,7 +6,7 @@
           <p class="text-center text-heading">STAY CONNECTED</p>
           <v-row justify="space-around" class="my-5">
             <a href="https://github.com/SamirOmarov" target="_blank">
-              <v-icon large color="#1ba098">mdi-github-circle</v-icon>
+              <v-icon large color="#1ba098">mdi-github</v-icon>
             </a>
             <a href="https://www.linkedin.com/in/samiromarov/" target="_blank">
               <v-icon large color="#1ba098">mdi-linkedin</v-icon>
