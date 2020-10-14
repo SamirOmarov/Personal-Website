@@ -31,7 +31,7 @@
             <div class="subheading mt-3 text-description">
               <ul style="margin-top:10px;">
                 <li>Python</li>
-                <li>Flask</li>
+                <li>Django&Django REST</li>
               </ul>
             </div>
           </v-col>
