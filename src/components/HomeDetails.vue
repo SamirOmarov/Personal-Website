@@ -22,11 +22,13 @@
               <ul style="margin-top:10px;">
                 <li>Python: Django, Flask, Automation</li>
                 <li>C/C++: Low level/embedded IoT programming</li>
+                <li>Rust</li>
+                <li>HTML & (S)CSS</li>
                 <li>Vue.js: Vuetify</li>
                 <li>Flutter</li>
-                <li>PostgreSQL</li>
+                <li>PostgreSQL, MongoDB</li>
                 <li>Docker,Kubernetes</li>
-                <li>HTML & (S)CSS</li>
+                <li>Version Control: GIT </li>
               </ul>
             </div>
           </v-col>
@@ -38,10 +40,9 @@
                 <li>Python essentials</li>
                 <li>Pytorch, Tensorflow</li>
                 <li>Data Modeling & Evaluation</li>
-                <li>Distributed Computing: AWS, Kaggle</li>
-                <li>Windows & Linux</li>
-                <li>Git</li>
-                <li>Web Scraping</li>
+                <li>Computer Vision, NLP</li>
+                <li>Data Mining & Visualization</li>
+                <li>Data & Quantitative Analysis</li>
               </ul>
             </div>
           </v-col>
